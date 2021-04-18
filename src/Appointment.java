@@ -14,19 +14,17 @@ public class Appointment {
   /*
   Constructors
   */
-  public Appointment()
+  public Appointment(Date date, String aliment)
   {
+    this.date = date;
+    this.aliment = aliment;
   }
   
   /*
   Methods
   */
-  public void Appointment(Date date, String str)
+  public void setFollowUp(Date followUp)
   {
-    //???
-  }
-  public void setFollowUp(Date date)
-  {
-    //???
+    this.followUp = followUp;
   }
 }
