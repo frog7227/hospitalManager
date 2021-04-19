@@ -55,7 +55,7 @@ public class FileHandler implements Database {
     @Override
     public void savePatient(Patient patient) throws PatientUnableToBeSavedException {
         try {
-            FileOutputStream fileWriter = new FileOutputStream(("../patients/" + patient.getName().replaceAll(" ", "").toUpperCase() + Extension)); // open the file to save the patient
+            FileOutputStream fileWriter = new FileOutputStream(("./patients/" + patient.getName().replaceAll(" ", "").toUpperCase() + Extension)); // open the file to save the patient
             ObjectOutputStream patientWriter = new ObjectOutputStream(fileWriter); // make the object writer
             patientWriter.writeObject(patient);// write the object to the file
 
