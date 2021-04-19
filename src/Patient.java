@@ -1,22 +1,26 @@
+import java.util.ArrayList;
+
 public class Patient {
     //-----------instance variables-----------
     //These variables are used to instantiate a new patient
     private String Name;
     private String Gender;
-    //private Date Birthdate;
+    private Date Birthdate;
     //----------------------------------------
     private String Doctor;
     private String Nurse;
-//    private Insurance PatIns;
-//    private ArrayList<Appointment> Apps;
-//    private ArrayList<Medication> Meds;
+    private Insurance PatIns;
+    private ArrayList<Appointment> Apps;
+    private ArrayList<Medication> Meds;
     //-----------------------------------------
 
     //methods, will put java docs here later
-    public Patient(String Name, String Gender) {
+    public Patient(String Name, String Gender, Date Birthdate) {
         this.Name = Name;
         this.Gender = Gender;
-        // this.Birthdate = Birthdate;
+        this.Birthdate = Birthdate;
+        this.Apps = new ArrayList<Appointment>();
+        this.Meds = new ArrayList<Medication>();
     }
 
     public String getName() {
@@ -50,48 +54,48 @@ public class Patient {
     public void setNurse(String Nurse) {
         this.Nurse = Nurse;
     }
-//
-//    public void setInsurance(Insurance Ins)
-//    {
-//        this.PatIns = Ins;
-//    }
-//
-//    public Insurance getInsurance()
-//    {
-//        return this.PatIns;
-//    }
 
-    //NEW USEFUL FUNCTION
-    public void Print() {
-        System.out.println("Name: " + this.Name);
-        System.out.println("Gender: " + this.Gender);
-        System.out.println("Doctor: " + this.Doctor);
-        System.out.println("Nurse: " + this.Nurse);
-
-        //for later:
-//        System.out.println("Birthdate: "+ Birthdate);
-//        System.out.println("Insurance information: "+ PatIns);
-//        System.out.println("Appointments for patient: "+ Apps.toString());
-//        System.out.println("Medications: "+ Meds.toString());
+    public void setInsurance(Insurance Ins)
+    {
+        this.PatIns = Ins;
     }
 
-//    public void addAppointment(Appointment NewApp)
-//    {
-//        Apps.add(NewApp);
-//    }
+    public Insurance getInsurance()
+    {
+        return this.PatIns;
+    }
+
+    //NEW USEFUL FUNCTION
+    public void Print()
+    {
+        System.out.println("Name: " + Name);
+        System.out.println("Gender: " + Gender);
+        System.out.println("Doctor: " + Doctor);
+        System.out.println("Nurse: " + Nurse);
+
+        System.out.println("Birthdate: "+ Birthdate);
+        System.out.println("Insurance information: "+ PatIns);
+        System.out.println("Appointments for patient: "+ Apps);
+        System.out.println("Medications: "+ Meds);
+    }
+
+    public void addAppointment(Appointment NewApp)
+    {
+        Apps.add(NewApp);
+    }
 
 //    public Appointment getAppoinment(Date AppDate)
 //    {
 //        //return AN appoinment attatched to AppDate
 //    }
 
-//    public void addMedication(Medication NewMed)
-//    {
-//        Meds.add(NewMed);
-//    }
+    public void addMedication(Medication NewMed)
+    {
+        Meds.add(NewMed);
+    }
 
-//    public ArrayList<Medication> getMedicationHistory()
-//    {
-//        return Meds;
-//    }
+    public ArrayList<Medication> getMedicationHistory()
+    {
+        return Meds;
+    }
 }

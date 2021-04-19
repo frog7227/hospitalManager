@@ -12,39 +12,52 @@ public class PatientRegistry {
     //Medication.java
     //Appoinment.java
 
-    public static void main(String[] args) {
-        Patient Mike = new Patient("Mike", "Male");
+    public static void main(String[] args)
+    {
+        Date thisDate = new Date(4,20,1996,15,30);
+        Patient Mike = new Patient("Mike", "Male", thisDate);
+        Date AppDate = new Date(6,21,2020, 6,30);
+        Appointment MikesApp = new Appointment(AppDate, "He has the AIDS");
+        Date StartDate = new Date(6,21,2020);
+        Date EndDate = new Date(8,21,2020);
+        Medication MikesMeds = new Medication("Vicadin", 500, "mg", StartDate, EndDate);
+        Insurance MikesIns = new Insurance("Mike Hawk", "1234566", "123456");
+
+        Mike.setInsurance(MikesIns);
+        Mike.addMedication(MikesMeds);
+        Mike.addAppointment(MikesApp);
         Mike.setDoctor("Jeffery Dahmer");
         Mike.setNurse("Nurse Nancy");
+
 
         System.out.println("Patient info: ");
         Mike.Print();
 
         //Now testing that user can change fields of Patient
-        Scanner KBScan = new Scanner(System.in);
-
-        //change the name
-        System.out.println("Enter new name for Mike: ");
-        String NewName = KBScan.nextLine();
-        Mike.setName(NewName);
-
-        //change gender
-        System.out.println("Enter gender for Mike: ");
-        String NewGender = KBScan.nextLine();
-        Mike.setGender(NewGender);
-
-        //change doctor
-        System.out.println("Change doctor for Mike: ");
-        String NewDoc = KBScan.nextLine();
-        Mike.setDoctor(NewDoc);
-
-        //change nurse
-        System.out.println("Change nurse for Mike: ");
-        String NewNurse = KBScan.nextLine();
-        Mike.setNurse(NewNurse);
-
-        System.out.println("New patient information: ");
-        Mike.Print();
+//        Scanner KBScan = new Scanner(System.in);
+//
+//        //change the name
+//        System.out.println("Enter new name for Mike: ");
+//        String NewName = KBScan.nextLine();
+//        Mike.setName(NewName);
+//
+//        //change gender
+//        System.out.println("Enter gender for Mike: ");
+//        String NewGender = KBScan.nextLine();
+//        Mike.setGender(NewGender);
+//
+//        //change doctor
+//        System.out.println("Change doctor for Mike: ");
+//        String NewDoc = KBScan.nextLine();
+//        Mike.setDoctor(NewDoc);
+//
+//        //change nurse
+//        System.out.println("Change nurse for Mike: ");
+//        String NewNurse = KBScan.nextLine();
+//        Mike.setNurse(NewNurse);
+//
+//        System.out.println("New patient information: ");
+//        Mike.Print();
 
         //end test----------------------------------------
     }
