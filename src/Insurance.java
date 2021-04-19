@@ -7,14 +7,14 @@ import java.io.Serializable;
  * @author Cameron Hoss
  */
 public class Insurance implements Serializable {
-    /*
+    /**
     Instance Variables
     */
     private String cardHolder;
     private String id;
     private String groupNum;
 
-    /*
+    /**
     Constructors
     */
     public Insurance(String cardHolder, String id, String groupNum) {
@@ -23,7 +23,7 @@ public class Insurance implements Serializable {
         this.groupNum = groupNum;
     }
 
-    /*
+    /**
     Methods
     */
     public String getCardHolder() {
