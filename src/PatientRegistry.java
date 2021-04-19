@@ -14,7 +14,9 @@ public class PatientRegistry {
 
     public static void main(String[] args)
     {
-        Date thisDate = new Date(4,20,1996,15,30);
+        //Instantiate all variables for a patient
+        FileHandler TheServer = new FileHandler();
+        Date thisDate = new Date(4,20,1996);
         Patient Mike = new Patient("Mike", "Male", thisDate);
         Date AppDate = new Date(6,21,2020, 6,30);
         Date AppDateTwo = new Date(7,21,2020, 6,30);
@@ -29,6 +31,7 @@ public class PatientRegistry {
                 StartDateTwo, EndDateTwo);
         Insurance MikesIns = new Insurance("Mike Hawk", "1234566", "123456");
 
+        //add/set everything to Mike Patient Object
         Mike.setInsurance(MikesIns);
         Mike.addMedication(MikesMeds);
         Mike.addMedication(MikesMedsTwo);
@@ -37,33 +40,42 @@ public class PatientRegistry {
         Mike.setDoctor("Jeffery Dahmer");
         Mike.setNurse("Nurse Nancy");
 
+        //print to make sure everything is ok
         Mike.Print();
 
+        //save to "server"
+        //TheServer.savePatient(Mike);
+
         //Now testing that user can change fields of Patient
-//        Scanner KBScan = new Scanner(System.in);
-//
-//        //change the name
-//        System.out.println("Enter new name for Mike: ");
-//        String NewName = KBScan.nextLine();
-//        Mike.setName(NewName);
-//
-//        //change gender
-//        System.out.println("Enter gender for Mike: ");
-//        String NewGender = KBScan.nextLine();
-//        Mike.setGender(NewGender);
-//
-//        //change doctor
-//        System.out.println("Change doctor for Mike: ");
-//        String NewDoc = KBScan.nextLine();
-//        Mike.setDoctor(NewDoc);
-//
-//        //change nurse
-//        System.out.println("Change nurse for Mike: ");
-//        String NewNurse = KBScan.nextLine();
-//        Mike.setNurse(NewNurse);
-//
-//        System.out.println("New patient information: ");
-//        Mike.Print();
+        Scanner KBScan = new Scanner(System.in);
+
+        //change the name
+        System.out.println("Change name for Mike: ");
+        String NewName = KBScan.nextLine();
+        Mike.setName(NewName);
+
+        //change gender
+        System.out.println("Change gender for Mike: ");
+        String NewGender = KBScan.nextLine();
+        Mike.setGender(NewGender);
+
+        //change gender
+        System.out.println("Change birthdate for Mike: ");
+        String NewGender = KBScan.nextLine();
+        Mike.setGender(NewGender);
+
+        //change doctor
+        System.out.println("Change doctor for Mike: ");
+        String NewDoc = KBScan.nextLine();
+        Mike.setDoctor(NewDoc);
+
+        //change nurse
+        System.out.println("Change nurse for Mike: ");
+        String NewNurse = KBScan.nextLine();
+        Mike.setNurse(NewNurse);
+
+        System.out.println("New patient information: ");
+        Mike.Print();
 
         //end test----------------------------------------
     }
