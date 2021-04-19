@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Patient {
+public class Patient implements Serializable {
     //-----------instance variables-----------
     //These variables are used to instantiate a new patient
     private String Name;

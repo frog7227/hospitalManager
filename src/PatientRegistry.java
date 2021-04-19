@@ -52,10 +52,11 @@ public class PatientRegistry {
 
         //pull from the file to print test
         try {
-            Patient BackHere = TheServer.openPatient("Mike");
-            BackHere.Print();
-        } catch (PatientNotFoundException | PatientFileDamagedException filestuff) {
-            System.out.println(filestuff.getMessage());
+            Patient patientFromDisk = TheServer.openPatient("Mike");
+            patientFromDisk.Print();
+
+        } catch (PatientNotFoundException | PatientFileDamagedException loadExceptions) {
+            System.out.println(loadExceptions.getMessage());
         }
 
         //Now testing that user can change fields of Patient

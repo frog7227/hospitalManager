@@ -1,9 +1,11 @@
+import java.io.Serializable;
+
 /**
   4/18/2021
   This class models appointments
   @author Cameron Hoss
 */
-public class Appointment {
+public class Appointment implements Serializable {
     /*
     Instance Variables
     */

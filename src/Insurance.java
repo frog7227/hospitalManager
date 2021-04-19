@@ -1,10 +1,12 @@
+import java.io.Serializable;
+
 /**
  * 4/18/2021
  * This class will model our patient's insurance
  *
  * @author Cameron Hoss
  */
-public class Insurance {
+public class Insurance implements Serializable {
     /*
     Instance Variables
     */
