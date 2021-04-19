@@ -1,10 +1,12 @@
+import java.io.Serializable;
+
 /**
  * 4/18/2021
  * This method will model the date and time so I schedule of events can be kept
  *
  * @author Cameron Hoss
  */
-public class Date {
+public class Date implements Serializable {
     /**
     Instance Variables
     */

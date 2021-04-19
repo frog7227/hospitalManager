@@ -1,18 +1,20 @@
+import java.io.Serializable;
+
 /**
  * 4/18/2021
  * This class will model our patient's insurance
  *
  * @author Cameron Hoss
  */
-public class Insurance {
-    /*
+public class Insurance implements Serializable {
+    /**
     Instance Variables
     */
     private String cardHolder;
     private String id;
     private String groupNum;
 
-    /*
+    /**
     Constructors
     */
     public Insurance(String cardHolder, String id, String groupNum) {
@@ -21,7 +23,7 @@ public class Insurance {
         this.groupNum = groupNum;
     }
 
-    /*
+    /**
     Methods
     */
     public String getCardHolder() {
