@@ -30,6 +30,8 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment Info: \n       Date: " + date + "\n    Aliment: " + aliment;
+        return "    Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment;
     }
+
+
 }
