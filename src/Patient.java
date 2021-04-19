@@ -73,7 +73,7 @@ public class Patient {
         System.out.println("Doctor: " + Doctor);
         System.out.println("Nurse: " + Nurse);
 
-        System.out.println("Birthdate: "+ Birthdate);
+        System.out.println("Birthdate: "+ Birthdate.getDate());
         System.out.println("Insurance information: "+ PatIns);
         System.out.println("Appointments for patient: "+ Apps);
         System.out.println("Medications: "+ Meds);
