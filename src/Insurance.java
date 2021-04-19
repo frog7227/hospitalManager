@@ -45,4 +45,8 @@ public class Insurance {
         this.id = id;
         this.groupNum = groupNum;
     }
+    @Override
+    public String toString() {
+        return "Insurance Info: \n       Name: " + cardHolder + "\n  ID Number: " + id + "\n   Group ID: " + groupNum;
+    }
 }
