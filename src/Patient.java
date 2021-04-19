@@ -78,10 +78,12 @@ public class Patient {
         System.out.println(PatIns.toString());
         System.out.println("===================================");
         System.out.println("Appointments for patient: ");
-        System.out.println(Apps.toString());
+        System.out.println(Apps.toString().replace("[","").replace("]","").trim()
+                .replace(",", ""));
         System.out.println("===================================");
         System.out.println("Medications: ");
-        System.out.println(Meds);
+        System.out.println(Meds.toString().replace("[","").replace("]","").trim()
+                .replace(",", ""));
         System.out.println("===========End of Patient==========");
     }
 

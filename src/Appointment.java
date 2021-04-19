@@ -30,8 +30,7 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "  ++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment;
+        return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
+                +"\r\n";
     }
-
-
 }

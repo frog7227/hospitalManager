@@ -60,6 +60,7 @@ public class Medication {
 
     @Override
     public String toString(){
-        return dose + doseUnit + " of "+ name + " from " + startDate.toString() + " to " + endDate.toString();
+        return "++"+dose + doseUnit + " of "+ name + " from " + startDate.getDate() + " to " + endDate.getDate()
+                +"\r\n";
     }
 }
