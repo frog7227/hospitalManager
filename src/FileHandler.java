@@ -27,13 +27,13 @@ public class FileHandler implements Database  {
      * @throws PatientNotFoundException if the patient could not be found on the disk
      */
     @Override
-    public Patient openPatient(String name) throws PatientNotFoundException {
+    public Patient openPatient(String name) throws PatientNotFoundException,PatientFileDamagedException {
         Patient patient;
         try {
             FileInputStream fileReader = new FileInputStream(("../patients/" + name.replaceAll(" ", "").toUpperCase() + Extension)); // open the file to read the patient
             ObjectInputStream patientReader = new ObjectInputStream(fileReader);// open the object reader
             patient = (Patient)  patientReader.readObject();// read the object and interpret it as a patient
-
+            if(!patient.getName().equals(name)) throw new PatientFileDamagedException();
         }catch (IOException | ClassNotFoundException exception){//catch the IO errors
 
             throw new PatientNotFoundException();// throw the exception to the caller informing them that the patient doesn't exist
