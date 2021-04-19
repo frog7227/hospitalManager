@@ -1,3 +1,4 @@
+// imports
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -5,12 +6,15 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;// used for the object saver
 
-public class FileHandler implements Database  {
+/**
+ * @author Andrew Ostrosky
+ */
+public class FileHandler implements Database {
     private final String Extension = ".patient";// the file extension used to save the patient
     /**
      * default constructor
      */
-    public FileHandler(){
+    public FileHandler(){// no actual constructor is needed
 
     }
 /*
