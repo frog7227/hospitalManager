@@ -1,9 +1,6 @@
-import java.util.ArrayList;
-
-public class Patient
-{
+public class Patient {
     //-----------instance variables-----------
-        //These variables are used to instantiate a new patient
+    //These variables are used to instantiate a new patient
     private String Name;
     private String Gender;
     //private Date Birthdate;
@@ -16,51 +13,42 @@ public class Patient
     //-----------------------------------------
 
     //methods, will put java docs here later
-    public Patient(String Name, String Gender)
-    {
+    public Patient(String Name, String Gender) {
         this.Name = Name;
         this.Gender = Gender;
-       // this.Birthdate = Birthdate;
+        // this.Birthdate = Birthdate;
     }
 
-    public void setName(String Name)
-    {
-        this.Name = Name;
-    }
-
-    public String getName()
-    {
+    public String getName() {
         return this.Name;
     }
 
-    public void setGender(String Gender)
-    {
-        this.Gender = Gender;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public String getGender()
-    {
+    public String getGender() {
         return this.Gender;
     }
 
-    public void setDoctor(String Doctor)
-    {
-        this.Doctor = Doctor;
+    public void setGender(String Gender) {
+        this.Gender = Gender;
     }
 
-    public String getDoctor()
-    {
+    public String getDoctor() {
         return this.Doctor;
     }
 
-    public void setNurse(String Nurse)
-    {
-        this.Nurse = Nurse;
+    public void setDoctor(String Doctor) {
+        this.Doctor = Doctor;
     }
 
-    public String getNurse()
-    {
+    public String getNurse() {
         return this.Nurse;
+    }
+
+    public void setNurse(String Nurse) {
+        this.Nurse = Nurse;
     }
 //
 //    public void setInsurance(Insurance Ins)
@@ -74,12 +62,11 @@ public class Patient
 //    }
 
     //NEW USEFUL FUNCTION
-    public void Print()
-    {
-        System.out.println("Name: "+this.Name);
-        System.out.println("Gender: "+this.Gender);
-        System.out.println("Doctor: "+this.Doctor);
-        System.out.println("Nurse: "+this.Nurse);
+    public void Print() {
+        System.out.println("Name: " + this.Name);
+        System.out.println("Gender: " + this.Gender);
+        System.out.println("Doctor: " + this.Doctor);
+        System.out.println("Nurse: " + this.Nurse);
 
         //for later:
 //        System.out.println("Birthdate: "+ Birthdate);

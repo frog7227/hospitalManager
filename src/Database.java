@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -6,5 +5,6 @@ import java.io.IOException;
  */
 public interface Database {
     Patient openPatient(String name) throws PatientNotFoundException, PatientFileDamagedException;
+
     void savePatient(Patient patient) throws IOException;
 }

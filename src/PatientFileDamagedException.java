@@ -1,7 +1,7 @@
 /**
  * @author Andrew Ostrosky
  */
-public class PatientFileDamagedException extends Exception{
+public class PatientFileDamagedException extends Exception {
 
     public PatientFileDamagedException() {
 

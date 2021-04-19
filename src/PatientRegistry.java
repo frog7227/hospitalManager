@@ -2,19 +2,17 @@ import java.util.Scanner;
 
 /**
  * PatientRegistry.java:
- *
+ * <p>
  * This will be our main method/class for the final project
  */
-public class PatientRegistry
-{
+public class PatientRegistry {
     //Testing patient fields and methods
     //NOTE: I am testing fields that DO NOT require:
     //Date.java
     //Medication.java
     //Appoinment.java
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Patient Mike = new Patient("Mike", "Male");
         Mike.setDoctor("Jeffery Dahmer");
         Mike.setNurse("Nurse Nancy");
