@@ -27,4 +27,9 @@ public class Appointment {
     {
       this.followUp = followUp;
     }
+
+    @Override
+    public String toString() {
+        return "Appointment Info: \n       Date: " + date + "\n    Aliment: " + aliment;
+    }
 }
