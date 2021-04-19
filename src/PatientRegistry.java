@@ -29,8 +29,6 @@ public class PatientRegistry {
         Mike.setDoctor("Jeffery Dahmer");
         Mike.setNurse("Nurse Nancy");
 
-
-        System.out.println("Patient info: ");
         Mike.Print();
 
         //Now testing that user can change fields of Patient

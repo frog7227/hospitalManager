@@ -68,18 +68,21 @@ public class Patient {
     //NEW USEFUL FUNCTION
     public void Print()
     {
-        System.out.println("Name: " + Name);
-        System.out.println("Gender: " + Gender);
-        System.out.println("Doctor: " + Doctor);
-        System.out.println("Nurse: " + Nurse);
-
-        System.out.println("Birthdate: "+ Birthdate.getDate());
-        System.out.println("Insurance information: ");
-        System.out.println(PatIns);
+        System.out.println("::::::::PATIENT INFORMATION::::::::");
+        System.out.println("       Name: " + Name);
+        System.out.println("     Gender: " + Gender);
+        System.out.println("  Birthdate: "+ Birthdate.getDate());
+        System.out.println("     Doctor: " + Doctor);
+        System.out.println("      Nurse: " + Nurse);
+        System.out.println("===================================");
+        System.out.println(PatIns.toString());
+        System.out.println("===================================");
         System.out.println("Appointments for patient: ");
-        System.out.println(Apps);
+        System.out.println(Apps.toString());
+        System.out.println("===================================");
         System.out.println("Medications: ");
         System.out.println(Meds);
+        System.out.println("===========End of Patient==========");
     }
 
     public void addAppointment(Appointment NewApp)
