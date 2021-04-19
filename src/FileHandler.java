@@ -39,7 +39,6 @@ public class FileHandler implements Database {
             if (!patient.getName().equals(name))
                 throw new PatientFileDamagedException(); // if the name in the opened file doesn't match the original name request, throw the damaged file exception
         } catch (IOException | ClassNotFoundException exception) {//catch the IO errors
-            exception.printStackTrace();
             throw new PatientNotFoundException();// throw the exception to the caller informing them that the patient doesn't exist
         }
 
@@ -62,7 +61,6 @@ public class FileHandler implements Database {
             patientWriter.close();// close the streams
             fileWriter.close();
         } catch (IOException e) {
-                e.printStackTrace();
             throw new PatientUnableToBeSavedException();// if an IOException occurs throw the unable to save exception
         }
 
