@@ -27,6 +27,7 @@ public class FileHandler implements Database {
      * @param name the name of the patient like "first last"; spacing and capitalization doesn't matter
      * @return the patient object
      * @throws PatientNotFoundException if the patient could not be found on the disk
+     * @throws PatientFileDamagedException if the patient name does not match the one loaded from the disk indicating tampering or corruption of the data.
      */
     @Override
     public Patient openPatient(String name) throws PatientNotFoundException, PatientFileDamagedException {
