@@ -77,7 +77,7 @@ public class PatientRegistry {
         System.out.println("New patient information: ");
         Mike.Print();
 
-        //end test----------------------------------------
+        //end .patients----------------------------------------
     }
 }
 

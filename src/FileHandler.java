@@ -33,7 +33,7 @@ public class FileHandler implements Database {
     public Patient openPatient(String name) throws PatientNotFoundException, PatientFileDamagedException {
         Patient patient;
         try {
-            FileInputStream fileReader = new FileInputStream(("../patients/" + name.replaceAll(" ", "").toUpperCase() + Extension)); // open the file to read the patient
+            FileInputStream fileReader = new FileInputStream(("./patients/" + name.replaceAll(" ", "").toUpperCase() + Extension)); // open the file to read the patient
             ObjectInputStream patientReader = new ObjectInputStream(fileReader);// open the object reader
             patient = (Patient) patientReader.readObject();// read the object and interpret it as a patient
             if (!patient.getName().equals(name))
@@ -55,7 +55,7 @@ public class FileHandler implements Database {
     @Override
     public void savePatient(Patient patient) throws PatientUnableToBeSavedException {
         try {
-            FileOutputStream fileWriter = new FileOutputStream(("../patients/" + patient.getName().replaceAll(" ", "").toUpperCase() + Extension)); // open the file to save the patient
+            FileOutputStream fileWriter = new FileOutputStream(("./patients/" + patient.getName().replaceAll(" ", "").toUpperCase() + Extension)); // open the file to save the patient
             ObjectOutputStream patientWriter = new ObjectOutputStream(fileWriter); // make the object writer
             patientWriter.writeObject(patient);// write the object to the file
 
