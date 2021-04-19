@@ -6,14 +6,14 @@ import java.io.Serializable;
   @author Cameron Hoss
 */
 public class Appointment implements Serializable {
-    /*
+    /**
     Instance Variables
     */
     private Date date;
     private String aliment;
     private Date followUp;
   
-    /*
+    /**
     Constructors
     */
     public Appointment(Date date, String aliment)
@@ -22,7 +22,7 @@ public class Appointment implements Serializable {
       this.aliment = aliment;
     }
   
-    /*
+    /**
     Methods
     */
     public void setFollowUp(Date followUp)
@@ -30,6 +30,9 @@ public class Appointment implements Serializable {
       this.followUp = followUp;
     }
 
+    /**
+     * toString to output class info
+     */
     @Override
     public String toString() {
         return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
