@@ -5,7 +5,7 @@
  * @author Cameron Hoss
  */
 public class Date {
-    /*
+    /**
     Instance Variables
     */
     private int hour;
@@ -14,8 +14,8 @@ public class Date {
     private int day;
     private int year;
 
-    /*
-    Contructors
+    /**
+     Contructors
     */
     public Date() {
         hour = 0;
@@ -49,8 +49,8 @@ public class Date {
         this.min = min;
     }
 
-    /*
-    Methods
+    /**
+    Getters
     */
     public String getDate() {
         return month + "/" + day + "/" + year;
