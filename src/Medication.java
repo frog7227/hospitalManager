@@ -57,4 +57,9 @@ public class Medication {
     {
       return dose + " " + doseUnit;
     }
+
+    @Override
+    public String toString(){
+        return dose + doseUnit + " of "+ name + " from " + startDate.toString() + " to " + endDate.toString();
+    }
 }
