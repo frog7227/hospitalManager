@@ -41,7 +41,7 @@ public class PatientRegistry {
         Mike.setNurse("Nurse Nancy");
 
         //print to make sure everything is ok
-        Mike.Print();
+        //Mike.Print();
 
         //save to "server"
         try {
@@ -97,9 +97,17 @@ public class PatientRegistry {
         System.out.println("Enter a date for appoinment: ");
         System.out.println("month: ");
         int newappmonth = KBScan.nextInt();
+        System.out.println("day: ");
         int newappday = KBScan.nextInt();
+        System.out.println("year: ");
         int newappyear = KBScan.nextInt();
-        Date newappdate = new Date(newappmonth,newappday,newappyear);
+        System.out.println("Time to visit: ");
+        System.out.println("Hour: ");
+        int newapphour = KBScan.nextInt();
+        System.out.println("Minute: ");
+        int newappmin = KBScan.nextInt();
+        Date newappdate = new Date(newappmonth,newappday,newappyear, newapphour,newappmin);
+        KBScan.nextLine();
         System.out.println("Enter reason for visit: ");
         String whyyouhere = KBScan.nextLine();
         Appointment newapp = new Appointment(newappdate, whyyouhere);
