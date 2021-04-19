@@ -50,17 +50,21 @@ public class FileHandler implements Database {
      * saves a patient file to the local storage
      *
      * @param patient is the patient to be saved to the disk
-     * @throws IOException when the the file cannot be saved
+     * @throws PatientUnableToBeSavedException when the the patient file cannot be saved for whatever Reason
      */
     @Override
-    public void savePatient(Patient patient) throws IOException {
+    public void savePatient(Patient patient) throws PatientUnableToBeSavedException {
+        try {
+            FileOutputStream fileWriter = new FileOutputStream(("../patients/" + patient.getName().replaceAll(" ", "").toUpperCase() + Extension)); // open the file to save the patient
+            ObjectOutputStream patientWriter = new ObjectOutputStream(fileWriter); // make the object writer
+            patientWriter.writeObject(patient);// write the object to the file
 
-        FileOutputStream fileWriter = new FileOutputStream(("../patients/" + patient.getName().replaceAll(" ", "").toUpperCase() + Extension)); // open the file to save the patient
-        ObjectOutputStream patientWriter = new ObjectOutputStream(fileWriter); // make the object writer
-        patientWriter.writeObject(patient);// write the object to the file
+            patientWriter.close();// close the streams
+            fileWriter.close();
+        } catch (IOException e) {
 
-        patientWriter.close();// close the streams
-        fileWriter.close();
+            throw new PatientUnableToBeSavedException();// if an IOException occurs throw the unable to save exception
+        }
 
     }
 }
