@@ -74,9 +74,12 @@ public class Patient {
         System.out.println("Nurse: " + Nurse);
 
         System.out.println("Birthdate: "+ Birthdate.getDate());
-        System.out.println("Insurance information: "+ PatIns);
-        System.out.println("Appointments for patient: "+ Apps);
-        System.out.println("Medications: "+ Meds);
+        System.out.println("Insurance information: ");
+        System.out.println(PatIns);
+        System.out.println("Appointments for patient: ");
+        System.out.println(Apps);
+        System.out.println("Medications: ");
+        System.out.println(Meds);
     }
 
     public void addAppointment(Appointment NewApp)
