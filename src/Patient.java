@@ -78,14 +78,29 @@ public class Patient implements Serializable {
         System.out.println("===================================");
         System.out.println(PatIns.toString());
         System.out.println("===================================");
-        System.out.println("Appointments for patient: ");
-        System.out.println(Apps.toString().replace("[","").replace("]","").trim()
-                .replace(",", ""));
-        System.out.println("===================================");
         System.out.println("Medications: ");
-        System.out.println(Meds.toString().replace("[","").replace("]","").trim()
-                .replace(",", ""));
+        if(Meds.isEmpty())
+        {
+            System.out.println("::No Medications for this patient in system::");
+        }
+        else
+        {
+            System.out.println(Meds.toString().replace("[","").replace("]","").trim()
+                    .replace(",", ""));
+        }
+        System.out.println("===================================");
+        System.out.println("Appointments for patient: ");
+        if(Apps.isEmpty())
+        {
+            System.out.println("::No Appointments for this patient in system::");
+        }
+        else
+        {
+            System.out.println(Apps.toString().replace("[","").replace("]","").trim()
+                    .replace(",", ""));
+        }
         System.out.println("===========End of Patient==========");
+        System.out.println("\n");
     }
 
     public void addAppointment(Appointment NewApp)

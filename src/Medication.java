@@ -14,6 +14,7 @@ public class Medication implements Serializable {
     private String doseUnit;
     private Date startDate;
     private Date endDate;
+    private String empty;
   
     /**
     Constructors
@@ -63,6 +64,6 @@ public class Medication implements Serializable {
     @Override
     public String toString(){
         return "++"+dose + doseUnit + " of "+ name + " from " + startDate.getDate() + " to " + endDate.getDate()
-                +"\r\n";
+                    +"\r\n";
     }
 }
