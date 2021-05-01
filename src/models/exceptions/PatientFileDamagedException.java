@@ -1,4 +1,4 @@
-package models;
+package models.exceptions;
 
 /**
  * @author Andrew Ostrosky

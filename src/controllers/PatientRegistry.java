@@ -2,8 +2,10 @@ package controllers;
 
 import java.util.Scanner;
 
-import controllers.FileHandler;
 import models.*;
+import models.exceptions.PatientFileDamagedException;
+import models.exceptions.PatientNotFoundException;
+import models.exceptions.PatientUnableToBeSavedException;
 
 /**
  * controllers.PatientRegistry.java:
@@ -59,7 +61,7 @@ public class PatientRegistry {
 //        //save to "server"
 //        try {
 //            TheServer.savePatient(Mike);
-//        } catch (models.PatientUnableToBeSavedException putbs) {
+//        } catch (models.exceptions.PatientUnableToBeSavedException putbs) {
 //            System.out.println(putbs.getMessage());
 //        }
 //
@@ -67,7 +69,7 @@ public class PatientRegistry {
 //        try {
 //            models.Patient BackHere = TheServer.openPatient("Mike");
 //            BackHere.Print();
-//        } catch (models.PatientNotFoundException | models.PatientFileDamagedException filestuff) {
+//        } catch (models.exceptions.PatientNotFoundException | models.exceptions.PatientFileDamagedException filestuff) {
 //            System.out.println(filestuff.getMessage());
 //        }
 //

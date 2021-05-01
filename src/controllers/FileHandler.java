@@ -1,6 +1,9 @@
 package controllers;// imports
 
 import models.*;
+import models.exceptions.PatientFileDamagedException;
+import models.exceptions.PatientNotFoundException;
+import models.exceptions.PatientUnableToBeSavedException;
 
 import java.io.*;
 

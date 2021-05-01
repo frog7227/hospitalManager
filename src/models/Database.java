@@ -1,8 +1,8 @@
 package models;
 
-import models.Patient;
-import models.PatientFileDamagedException;
-import models.PatientNotFoundException;
+import models.exceptions.PatientFileDamagedException;
+import models.exceptions.PatientNotFoundException;
+import models.exceptions.PatientUnableToBeSavedException;
 
 /**
  * This interface allows for opening a connection to the models.Database, in this case the file
