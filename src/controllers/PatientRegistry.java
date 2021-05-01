@@ -206,35 +206,51 @@ public class PatientRegistry {
                 while(true)
                 {
                     System.out.println("Enter the month of the birthdate of this patient:");
+                    while(!scan.hasNextInt()) {
+                        scan.next();
+                        System.err.println("Please enter a number.");
+                    }
+                    while(!scan.hasNextInt()) {
+                        scan.next();
+                        System.err.println("Please enter a number.");
+                    }
                     month = scan.nextInt();
                     //check month number to make sure it is a valid input
                     if(month>12 || month<1)
                     {
-                        System.out.println("::Invalid month, please enter an number between 1-12::");
+                        System.err.println("::Invalid month, please enter an number between 1-12::");
                         continue;
                     }
 
                     System.out.println("Enter the day of the birthdate of this patient:");
+                    while(!scan.hasNextInt()) {
+                        scan.next();
+                        System.err.println("Please enter a number.");
+                    }
                     day = scan.nextInt();
                     //check for even # months (30 days)
                         //or if day is < 1
                     if(month%2==0 && day>30 || day<1)
                     {
-                        System.out.println("::Invalid day, check what month it is::");
+                        System.err.println("::Invalid day, check what month it is::");
                         continue;
                     }
                     if(day>31)
                     {
-                        System.out.println("Invalid day, enter number from 1-31");
+                        System.err.println("::Invalid day, enter number from 1-31::");
                         continue;
                     }
 
                     System.out.println("Enter the year of the birthdate of this patient:");
+                    while(!scan.hasNextInt()) {
+                        scan.next();
+                        System.err.println("Please enter a number.");
+                    }
                     year = scan.nextInt();
                     //make sure patient was not born in the future
                     if(year>2020)
                     {
-                        System.out.println("::Invalid year, try again::");
+                        System.err.println("::Invalid year, try again::");
                         continue;
                     }
                     //only way for loop to loop is if there is an invalid input
@@ -286,27 +302,40 @@ public class PatientRegistry {
                     int MedStartMonth, MedStartDay, MedStartYear;
                     while (true) {
                         System.out.println("Enter a start month for new medication:");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         MedStartMonth = scan.nextInt();
+
                         //check month number to make sure it is a valid input
                         if (MedStartMonth > 12 || MedStartMonth < 1) {
-                            System.out.println("::Invalid month, please enter an number between 1-12::");
+                            System.err.println("::Invalid month, please enter an number between 1-12::");
                             continue;
                         }
 
                         System.out.println("Enter a start day for new medication:");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         MedStartDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
                         if (MedStartDay % 2 == 0 && MedStartDay > 30 || MedStartDay < 1) {
-                            System.out.println("::Invalid day, try again::");
+                            System.err.println("::Invalid day, try again::");
                             continue;
                         }
                         if (MedStartDay > 31) {
-                            System.out.println("Invalid day, enter number from 1-31, try again");
+                            System.err.println("Invalid day, enter number from 1-31, try again");
                             continue;
                         }
 
                         System.out.println("Enter a start year for new medication:");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         MedStartYear = scan.nextInt();
 
                         //only way for loop to loop is if there is an invalid input
@@ -318,31 +347,43 @@ public class PatientRegistry {
                     int MedEndMonth, MedEndDay, MedEndYear;
                     while (true) {
                         System.out.println("Enter the end month for the new medication: ");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         MedEndMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
                         if (MedEndMonth > 12 || MedEndMonth < 1) {
-                            System.out.println("::Invalid month, please enter an number between 1-12::");
+                            System.err.println("::Invalid month, please enter an number between 1-12::");
                             continue;
                         }
 
                         System.out.println("Enter the end day for new medication: ");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         MedEndDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
                         if (MedEndDay % 2 == 0 && MedEndDay > 30 || MedEndDay < 1) {
-                            System.out.println("::Invalid day, try again::");
+                            System.err.println("::Invalid day, try again::");
                             continue;
                         }
                         if (MedEndDay > 31) {
-                            System.out.println("Invalid day, enter number from 1-31, try again");
+                            System.err.println("Invalid day, enter number from 1-31, try again");
                             continue;
                         }
 
                         System.out.println("Enter the end month for new medication: ");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         MedEndYear = scan.nextInt();
                         //make sure patient was not born in the future
                         if (MedEndYear < MedStartYear) {
-                            System.out.println("::Invalid year, try again::");
+                            System.err.println("::Invalid year, try again::");
                             continue;
                         }
                         //only way for loop to loop is if there is an invalid input
@@ -370,11 +411,15 @@ public class PatientRegistry {
                     while(true)
                     {
                         System.out.println("Enter the month of the appointment:");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         AppMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
                         if(AppMonth>12 || AppMonth<1)
                         {
-                            System.out.println("::Invalid month, please enter an number between 1-12::");
+                            System.err.println("::Invalid month, please enter an number between 1-12::");
                             continue;
                         }
 
@@ -384,26 +429,34 @@ public class PatientRegistry {
                         //or if day is < 1
                         if(AppMonth%2==0 && AppDay>30 || AppDay<1)
                         {
-                            System.out.println("::Invalid day, try again::");
+                            System.err.println("::Invalid day, try again::");
                             continue;
                         }
                         if(AppDay>31)
                         {
-                            System.out.println("Invalid day, enter number from 1-31, try again");
+                            System.err.println("Invalid day, enter number from 1-31, try again");
                             continue;
                         }
 
                         System.out.println("Enter the Year for the appointment:");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         AppYear = scan.nextInt();
                         //make sure appointment is not in the past
                             //anything before this year = invalid to make things simpler
                         if(AppYear<2021)
                         {
-                            System.out.println("::Invalid year, try again::");
+                            System.err.println("::Invalid year, try again::");
                             continue;
                         }
 
                         System.out.println("Enter the hour of the appointment (24HR time): ");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         AppHour = scan.nextInt();
                         if(AppHour < 1 || AppHour > 24)
                         {
@@ -412,6 +465,10 @@ public class PatientRegistry {
                         }
 
                         System.out.println("Enter the minutes of the appointment:");
+                        while(!scan.hasNextInt()) {
+                            scan.next();
+                            System.err.println("Please enter a number.");
+                        }
                         AppMin = scan.nextInt();
                         if(AppMin < 1 || AppMin > 59)
                         {
