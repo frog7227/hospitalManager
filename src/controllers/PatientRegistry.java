@@ -444,7 +444,12 @@ public class PatientRegistry {
                 catch (PatientUnableToBeSavedException putbs) {
                         System.out.println(putbs.getMessage());
                     }
+            }
+            //------------END ADDING NEW PATIENT---------------------------
 
+            //LOOKUP A PATIENT VIA THEIR FULL NAME
+            if(usrChoice == 2)
+            {
                 //this was just me testing, remove and move to option 2
                 System.out.println("Enter name of patient to be looked up:");
                 String Lookupname = scan.nextLine();
@@ -452,17 +457,13 @@ public class PatientRegistry {
                 try {
                     Patient BackHere = TheServer.openPatient(Lookupname);
                     BackHere.Print();
-                    }
+                }
                 catch (PatientNotFoundException | PatientFileDamagedException filestuff)
-                    {
+                {
                     System.out.println(filestuff.getMessage());
-                    }
+                }
             }
-            //------------END ADDING NEW PATIENT---------------------------
-//            if(usrChoice == 2)
-//            {
-//                //enter stuff here
-//            }
+            //--------------END PATIENT LOOKUP-------------------
         }
     }
 }
