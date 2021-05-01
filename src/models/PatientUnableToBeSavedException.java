@@ -1,8 +1,10 @@
+package models;
+
 /**
  * @author Andrew Ostrosky
  */
 public class PatientUnableToBeSavedException extends Exception {
     public PatientUnableToBeSavedException() {
-        super("The Patient couldn't be saved to the Database.");
+        super("The models.Patient couldn't be saved to the models.Database.");
     }
 }

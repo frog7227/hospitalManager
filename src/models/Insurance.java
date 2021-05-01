@@ -1,3 +1,5 @@
+package models;
+
 import java.io.Serializable;
 
 /**
@@ -49,6 +51,6 @@ public class Insurance implements Serializable {
     }
     @Override
     public String toString() {
-        return "Insurance Info: \n       Name: " + cardHolder + "\n  ID Number: " + id + "\n   Group ID: " + groupNum;
+        return "models.Insurance Info: \n       Name: " + cardHolder + "\n  ID Number: " + id + "\n   Group ID: " + groupNum;
     }
 }

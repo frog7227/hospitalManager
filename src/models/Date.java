@@ -1,4 +1,6 @@
+package models;
 import java.io.Serializable;
+
 
 /**
  * 4/18/2021

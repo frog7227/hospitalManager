@@ -1,4 +1,6 @@
-// imports
+package controllers;// imports
+
+import models.*;
 
 import java.io.*;
 

@@ -1,3 +1,4 @@
+package models;
 import java.io.Serializable;
 
 /**
@@ -36,7 +37,7 @@ public class Appointment implements Serializable {
      */
     @Override
     public String toString() {
-        return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
+        return "++models.Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
                     +"\r\n";
     }
 }

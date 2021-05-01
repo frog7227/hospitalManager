@@ -1,7 +1,11 @@
-import java.io.IOException;
+package models;
+
+import models.Patient;
+import models.PatientFileDamagedException;
+import models.PatientNotFoundException;
 
 /**
- * This interface allows for opening a connection to the Database, in this case the file
+ * This interface allows for opening a connection to the models.Database, in this case the file
  *
  * @author Andrew Ostrosky
  */

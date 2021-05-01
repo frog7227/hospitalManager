@@ -1,3 +1,7 @@
+package models;
+
+import models.Date;
+
 import java.io.Serializable;
 
 /**

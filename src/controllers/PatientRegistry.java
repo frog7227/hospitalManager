@@ -1,40 +1,50 @@
+package controllers;
+
 import java.util.Scanner;
 
+import controllers.FileHandler;
+import models.*;
+
 /**
- * PatientRegistry.java:
+ * controllers.PatientRegistry.java:
  * <p>
  * This will be our main method/class for the final project
+ *
+ * @author Alexander Croll
+ * @author Andrew
+ * @author Cameron
  */
 public class PatientRegistry {
     //Testing patient fields and methods
     //NOTE: I am testing fields that DO NOT require:
-    //Date.java
-    //Medication.java
+    //models.Date.java
+    //models.Medication.java
     //Appoinment.java
 
     public static void main(String[] args)
     {
 
         //BELOW IS THE FIRST TEST WE RAN TO MAKE SURE EVERYTHING WORKED
+        //DELETE BEFORE SUBMITTING
 
 //        //Instantiate all variables for a patient
-//        FileHandler TheServer = new FileHandler();
-//        Date thisDate = new Date(4,20,1996);
-//        Patient Mike = new Patient("Mike", "Male", thisDate);
-//        Date AppDate = new Date(6,21,2020, 6,30);
-//        Date AppDateTwo = new Date(7,21,2020, 6,30);
-//        Appointment MikesApp = new Appointment(AppDate, "He has the AIDS");
-//        Appointment MikesSecondApp = new Appointment(AppDateTwo, "He trippin son");
-//        Date StartDate = new Date(6,21,2020);
-//        Date EndDate = new Date(8,21,2020);
-//        Date StartDateTwo = new Date(8,22,2020);
-//        Date EndDateTwo = new Date(11,22,2020);
-//        Medication MikesMeds = new Medication("Vicadin", 500, "mg", StartDate, EndDate);
-//        Medication MikesMedsTwo = new Medication("Fentonol/Bleach", 500, "kg",
+//        controllers.FileHandler TheServer = new controllers.FileHandler();
+//        models.Date thisDate = new models.Date(4,20,1996);
+//        models.Patient Mike = new models.Patient("Mike", "Male", thisDate);
+//        models.Date AppDate = new models.Date(6,21,2020, 6,30);
+//        models.Date AppDateTwo = new models.Date(7,21,2020, 6,30);
+//        models.Appointment MikesApp = new models.Appointment(AppDate, "He has the AIDS");
+//        models.Appointment MikesSecondApp = new models.Appointment(AppDateTwo, "He trippin son");
+//        models.Date StartDate = new models.Date(6,21,2020);
+//        models.Date EndDate = new models.Date(8,21,2020);
+//        models.Date StartDateTwo = new models.Date(8,22,2020);
+//        models.Date EndDateTwo = new models.Date(11,22,2020);
+//        models.Medication MikesMeds = new models.Medication("Vicadin", 500, "mg", StartDate, EndDate);
+//        models.Medication MikesMedsTwo = new models.Medication("Fentonol/Bleach", 500, "kg",
 //                StartDateTwo, EndDateTwo);
-//        Insurance MikesIns = new Insurance("Mike Hawk", "1234566", "123456");
+//        models.Insurance MikesIns = new models.Insurance("Mike Hawk", "1234566", "123456");
 //
-//        //add/set everything to Mike Patient Object
+//        //add/set everything to Mike models.Patient Object
 //        Mike.setInsurance(MikesIns);
 //        Mike.addMedication(MikesMeds);
 //        Mike.addMedication(MikesMedsTwo);
@@ -49,19 +59,19 @@ public class PatientRegistry {
 //        //save to "server"
 //        try {
 //            TheServer.savePatient(Mike);
-//        } catch (PatientUnableToBeSavedException putbs) {
+//        } catch (models.PatientUnableToBeSavedException putbs) {
 //            System.out.println(putbs.getMessage());
 //        }
 //
 //        //pull from the file to print test
 //        try {
-//            Patient BackHere = TheServer.openPatient("Mike");
+//            models.Patient BackHere = TheServer.openPatient("Mike");
 //            BackHere.Print();
-//        } catch (PatientNotFoundException | PatientFileDamagedException filestuff) {
+//        } catch (models.PatientNotFoundException | models.PatientFileDamagedException filestuff) {
 //            System.out.println(filestuff.getMessage());
 //        }
 //
-//        //Now testing that user can change fields of Patient
+//        //Now testing that user can change fields of models.Patient
 //        Scanner KBScan = new Scanner(System.in);
 //
 //        //change the name
@@ -92,7 +102,7 @@ public class PatientRegistry {
 //        String newid = KBScan.next();
 //        System.out.println("Enter new group number: ");
 //        String newgroup = KBScan.next();
-//        Insurance hisNewIns = new Insurance(newcardholder, newid, newgroup);
+//        models.Insurance hisNewIns = new models.Insurance(newcardholder, newid, newgroup);
 //        Mike.setInsurance(hisNewIns);
 //
 //        //add an appointment
@@ -109,11 +119,11 @@ public class PatientRegistry {
 //        int newapphour = KBScan.nextInt();
 //        System.out.println("Minute: ");
 //        int newappmin = KBScan.nextInt();
-//        Date newappdate = new Date(newappmonth,newappday,newappyear, newapphour,newappmin);
+//        models.Date newappdate = new models.Date(newappmonth,newappday,newappyear, newapphour,newappmin);
 //        KBScan.nextLine();
 //        System.out.println("Enter reason for visit: ");
 //        String whyyouhere = KBScan.nextLine();
-//        Appointment newapp = new Appointment(newappdate, whyyouhere);
+//        models.Appointment newapp = new models.Appointment(newappdate, whyyouhere);
 //        Mike.addAppointment(newapp);
 //
 //        //add a medication
@@ -132,7 +142,7 @@ public class PatientRegistry {
 //        int newmedday = KBScan.nextInt();
 //        System.out.println("year: ");
 //        int newmedyear = KBScan.nextInt();
-//        Date newmeddate = new Date(newmedmonth,newmedday,newmedyear);
+//        models.Date newmeddate = new models.Date(newmedmonth,newmedday,newmedyear);
 //
 //        System.out.println("Enter an end date for new medication: ");
 //        System.out.println("month: ");
@@ -141,9 +151,9 @@ public class PatientRegistry {
 //        int newmeddayend = KBScan.nextInt();
 //        System.out.println("year: ");
 //        int newmedyearend = KBScan.nextInt();
-//        Date newmeddateend = new Date(newmedmonthend, newmeddayend, newmedyearend);
+//        models.Date newmeddateend = new models.Date(newmedmonthend, newmeddayend, newmedyearend);
 //
-//        Medication newmedenddate = new Medication(newmedname, newdose, newdoseunit, newmeddate, newmeddateend);
+//        models.Medication newmedenddate = new models.Medication(newmedname, newdose, newdoseunit, newmeddate, newmeddateend);
 //        Mike.addMedication(newmedenddate);
 //
 //        System.out.println("New patient information: ");
@@ -152,27 +162,32 @@ public class PatientRegistry {
         //end initial test----------------------------------------
 
         //real stuff starts here
+        //Make a new controllers.FileHandler instance for JSON file
         FileHandler TheServer = new FileHandler();
 
         while(true)
         {
+            //user menu
             Scanner scan = new Scanner(System.in);
 
-            System.out.println("::Welcome to PatientRegistry!::");
+            System.out.println("::Welcome to controllers.PatientRegistry!::");
             System.out.println( "::Enter function you would like to complete::");
             System.out.println("1. Add patient to system");
             System.out.println("2. Look up patient in system");
             System.out.println("3. Quit");
             System.out.println("Enter number (i.e: 1 or 2 or 3)");
 
+            //choice of function
             int usrChoice = scan.nextInt();
 
+            //QUIT PROGRAM
             if(usrChoice == 3)
             {
                 System.out.println(":::Thank you, goodbye:::");
                 break;
             }
 
+            //ADDING A PATIENT
             if(usrChoice == 1)
             {
                 System.out.println("Enter full name of new patient:");
@@ -181,7 +196,7 @@ public class PatientRegistry {
                 System.out.println("Enter gender of new patient:");
 
                 String gender = scan.nextLine();
-                System.out.println("Enter Birthdate of new Patient:");
+                System.out.println("Enter Birthdate of new models.Patient:");
 
                 int month, day,year;
 
@@ -237,7 +252,7 @@ public class PatientRegistry {
                 newPat.setDoctor(newPatDoc);
                 newPat.setNurse(newPatNurse);
 
-                System.out.println("Enter Insurance information on patient:");
+                System.out.println("Enter models.Insurance information on patient:");
                 System.out.println("Enter cardholder name: ");
                 String cardholder = scan.nextLine();
 
@@ -346,7 +361,7 @@ public class PatientRegistry {
                 }
                 scan.nextLine();
 
-                //enter patient Appointment if they need to
+                //enter patient models.Appointment if they need to
                 System.out.println("Do you want to add an appointment for this patient?");
                 System.out.println("answer 'yes' or 'no':");
                 String choice = scan.next();
