@@ -198,13 +198,13 @@ public class PatientRegistry {
                 System.out.println("Enter gender of new patient:");
 
                 String gender = scan.nextLine();
-                System.out.println("Enter Birthdate of new models.Patient:");
+                System.out.println("Enter Birthdate of new Patient:");
 
                 int month, day,year;
 
                 while(true)
                 {
-                    System.out.println("month: ");
+                    System.out.println("Enter the month of the birthdate of this patient:");
                     month = scan.nextInt();
                     //check month number to make sure it is a valid input
                     if(month>12 || month<1)
@@ -213,7 +213,7 @@ public class PatientRegistry {
                         continue;
                     }
 
-                    System.out.println("day: ");
+                    System.out.println("Enter the day of the birthdate of this patient:");
                     day = scan.nextInt();
                     //check for even # months (30 days)
                         //or if day is < 1
@@ -228,7 +228,7 @@ public class PatientRegistry {
                         continue;
                     }
 
-                    System.out.println("year: ");
+                    System.out.println("Enter the year of the birthdate of this patient:");
                     year = scan.nextInt();
                     //make sure patient was not born in the future
                     if(year>2020)
@@ -254,7 +254,7 @@ public class PatientRegistry {
                 newPat.setDoctor(newPatDoc);
                 newPat.setNurse(newPatNurse);
 
-                System.out.println("Enter models.Insurance information on patient:");
+                System.out.println("Enter Insurance information on patient:");
                 System.out.println("Enter cardholder name: ");
                 String cardholder = scan.nextLine();
 
@@ -285,7 +285,7 @@ public class PatientRegistry {
                     int MedStartMonth, MedStartDay, MedStartYear;
                     while(true)
                     {
-                        System.out.println("month: ");
+                        System.out.println("Enter a start month for new medication:");
                         MedStartMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
                         if(MedStartMonth>12 || MedStartMonth<1)
@@ -294,7 +294,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("day: ");
+                        System.out.println("Enter a start day for new medication:");
                         MedStartDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
@@ -309,7 +309,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("year: ");
+                        System.out.println("Enter a start year for new medication:");
                         MedStartYear = scan.nextInt();
 
                         //only way for loop to loop is if there is an invalid input
@@ -317,11 +317,11 @@ public class PatientRegistry {
                     }
                     Date newMedStartDate = new Date(MedStartMonth,MedStartDay,MedStartYear);
 
-                    System.out.println("Enter an end date for new medication: ");
+
                     int MedEndMonth, MedEndDay, MedEndYear;
                     while(true)
                     {
-                        System.out.println("month: ");
+                        System.out.println("Enter the end month for the new medication: ");
                         MedEndMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
                         if(MedEndMonth>12 || MedEndMonth<1)
@@ -330,7 +330,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("day: ");
+                        System.out.println("Enter the end day for new medication: ");
                         MedEndDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
@@ -345,7 +345,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("year: ");
+                        System.out.println("Enter the end month for new medication: ");
                         MedEndYear = scan.nextInt();
                         //make sure patient was not born in the future
                         if(MedEndYear<MedStartYear)
@@ -370,11 +370,11 @@ public class PatientRegistry {
 
                 if(choice.toLowerCase().compareTo("yes") == 0)
                 {
-                    System.out.println("Enter a date for appoinment: ");
+                    //System.out.println("Enter a date for appointment: ");
                     int AppMonth, AppDay, AppYear, AppHour, AppMin;
                     while(true)
                     {
-                        System.out.println("month: ");
+                        System.out.println("Enter the month of the appointment:");
                         AppMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
                         if(AppMonth>12 || AppMonth<1)
@@ -383,7 +383,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("day: ");
+                        System.out.println("Enter the day of the appointment:");
                         AppDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
@@ -398,7 +398,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("year: ");
+                        System.out.println("Enter the Year for the appointment:");
                         AppYear = scan.nextInt();
                         //make sure appointment is not in the past
                             //anything before this year = invalid to make things simpler
@@ -408,7 +408,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("Hour: ");
+                        System.out.println("Enter the hour of the appointment (24HR time): ");
                         AppHour = scan.nextInt();
                         if(AppHour < 1 || AppHour > 24)
                         {
@@ -416,7 +416,7 @@ public class PatientRegistry {
                             continue;
                         }
 
-                        System.out.println("Minute: ");
+                        System.out.println("Enter the minutes of the appointment:");
                         AppMin = scan.nextInt();
                         if(AppMin < 1 || AppMin > 59)
                         {
