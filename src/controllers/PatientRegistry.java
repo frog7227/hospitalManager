@@ -172,7 +172,7 @@ public class PatientRegistry {
             //user menu
             Scanner scan = new Scanner(System.in);
 
-            System.out.println("::Welcome to controllers.PatientRegistry!::");
+            System.out.println("::Welcome to PatientRegistry!::");
             System.out.println( "::Enter function you would like to complete::");
             System.out.println("1. Add patient to system");
             System.out.println("2. Look up patient in system");
@@ -181,6 +181,7 @@ public class PatientRegistry {
 
             //choice of function
             int usrChoice = scan.nextInt();
+            scan.nextLine();
 
             //QUIT PROGRAM
             if(usrChoice == 3)
@@ -193,12 +194,12 @@ public class PatientRegistry {
             if(usrChoice == 1)
             {
                 System.out.println("Enter full name of new patient:");
-                scan.nextLine();
+                //scan.nextLine();
                 String name = scan.nextLine();
                 System.out.println("Enter gender of new patient:");
 
                 String gender = scan.nextLine();
-                System.out.println("Enter Birthdate of new Patient:");
+               // System.out.println("Enter Birthdate of new Patient:");
 
                 int month, day,year;
 
@@ -269,8 +270,8 @@ public class PatientRegistry {
 
                 System.out.println("Do they have any medications? answer 'yes' or 'no'");
                 String medsq = scan.next();
-                if(medsq.toLowerCase().compareTo("yes") == 0)
-                {
+                if(medsq.toLowerCase().compareTo("yes") == 0) {
+                    while(medsq.equals("yes")){
                     //add a medication
                     System.out.println("Add a medication to patient's medication history: ");
                     System.out.println("New medication name: ");
@@ -281,15 +282,13 @@ public class PatientRegistry {
                     System.out.println("Enter unit for dose (ex. mg, g, kg, etc...): ");
                     String newdoseunit = scan.next();
 
-                    System.out.println("Enter a start date for new medication: ");
+                   // System.out.println("Enter a start date for new medication: ");
                     int MedStartMonth, MedStartDay, MedStartYear;
-                    while(true)
-                    {
+                    while (true) {
                         System.out.println("Enter a start month for new medication:");
                         MedStartMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
-                        if(MedStartMonth>12 || MedStartMonth<1)
-                        {
+                        if (MedStartMonth > 12 || MedStartMonth < 1) {
                             System.out.println("::Invalid month, please enter an number between 1-12::");
                             continue;
                         }
@@ -298,13 +297,11 @@ public class PatientRegistry {
                         MedStartDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
-                        if(MedStartDay%2==0 && MedStartDay>30 || MedStartDay<1)
-                        {
+                        if (MedStartDay % 2 == 0 && MedStartDay > 30 || MedStartDay < 1) {
                             System.out.println("::Invalid day, try again::");
                             continue;
                         }
-                        if(MedStartDay>31)
-                        {
+                        if (MedStartDay > 31) {
                             System.out.println("Invalid day, enter number from 1-31, try again");
                             continue;
                         }
@@ -315,17 +312,15 @@ public class PatientRegistry {
                         //only way for loop to loop is if there is an invalid input
                         break;
                     }
-                    Date newMedStartDate = new Date(MedStartMonth,MedStartDay,MedStartYear);
+                    Date newMedStartDate = new Date(MedStartMonth, MedStartDay, MedStartYear);
 
 
                     int MedEndMonth, MedEndDay, MedEndYear;
-                    while(true)
-                    {
+                    while (true) {
                         System.out.println("Enter the end month for the new medication: ");
                         MedEndMonth = scan.nextInt();
                         //check month number to make sure it is a valid input
-                        if(MedEndMonth>12 || MedEndMonth<1)
-                        {
+                        if (MedEndMonth > 12 || MedEndMonth < 1) {
                             System.out.println("::Invalid month, please enter an number between 1-12::");
                             continue;
                         }
@@ -334,13 +329,11 @@ public class PatientRegistry {
                         MedEndDay = scan.nextInt();
                         //check for even # months (30 days)
                         //or if day is < 1
-                        if(MedEndDay%2==0 && MedEndDay>30 || MedEndDay<1)
-                        {
+                        if (MedEndDay % 2 == 0 && MedEndDay > 30 || MedEndDay < 1) {
                             System.out.println("::Invalid day, try again::");
                             continue;
                         }
-                        if(MedEndDay>31)
-                        {
+                        if (MedEndDay > 31) {
                             System.out.println("Invalid day, enter number from 1-31, try again");
                             continue;
                         }
@@ -348,8 +341,7 @@ public class PatientRegistry {
                         System.out.println("Enter the end month for new medication: ");
                         MedEndYear = scan.nextInt();
                         //make sure patient was not born in the future
-                        if(MedEndYear<MedStartYear)
-                        {
+                        if (MedEndYear < MedStartYear) {
                             System.out.println("::Invalid year, try again::");
                             continue;
                         }
@@ -360,10 +352,13 @@ public class PatientRegistry {
 
                     Medication newmedenddate = new Medication(newmedname, newdose, newdoseunit, newMedStartDate, newMedEndDate);
                     newPat.addMedication(newmedenddate);
+                        System.out.println("Do they have any additional medications? answer 'yes' or 'no'");
+                        medsq = scan.next();
+                }
                 }
                 scan.nextLine();
 
-                //enter patient models.Appointment if they need to
+                //enter patient Appointment if they need to
                 System.out.println("Do you want to add an appointment for this patient?");
                 System.out.println("answer 'yes' or 'no':");
                 String choice = scan.next();
@@ -427,7 +422,7 @@ public class PatientRegistry {
                         break;
                     }
                     Date newappdate = new Date(AppMonth,AppDay,AppYear, AppHour,AppMin);
-//                    scan.nextLine();
+                    scan.nextLine();
 
                     System.out.println("Enter reason for visit: ");
                     String whyyouhere = scan.nextLine();

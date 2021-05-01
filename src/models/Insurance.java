@@ -51,6 +51,6 @@ public class Insurance implements Serializable {
     }
     @Override
     public String toString() {
-        return "models.Insurance Info: \n       Name: " + cardHolder + "\n  ID Number: " + id + "\n   Group ID: " + groupNum;
+        return "Insurance Info: \n       Name: " + cardHolder + "\n  ID Number: " + id + "\n   Group ID: " + groupNum;
     }
 }
