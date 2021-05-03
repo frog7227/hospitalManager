@@ -18,16 +18,10 @@ import models.exceptions.PatientUnableToBeSavedException;
  * @author Cameron Hoss
  */
 public class PatientRegistry {
-    //Testing patient fields and methods
-    //NOTE: I am testing fields that DO NOT require:
-    //models.Date.java
-    //models.Medication.java
-    //Appointment.java
 
 
     public static void main(String[] args)
     {
-        //real stuff starts here
         //Make a new controllers.FileHandler instance for JSON file
         FileHandler TheServer = new FileHandler();
 
