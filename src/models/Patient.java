@@ -42,8 +42,7 @@ public class Patient implements Serializable {
     //-----------------------------------------
 
     /**
-     * Constructor for a models.Patient instance.  Takes in a name, gender and birthdate to create
-     * a new models.Patient.
+     * Constructor for a Patient instance.  Takes in a name, gender and birthdate to create a new Patient.
      *
      * @param Name
      * @param Gender
@@ -61,7 +60,7 @@ public class Patient implements Serializable {
      * getName:
      * Returns the name of a patient.
      *
-     * @return models.Patient.name
+     * @return name
      */
     public String getName() {
         return this.Name;
@@ -81,7 +80,7 @@ public class Patient implements Serializable {
      *getGender:
      * Returns the gender of a models.Patient.
      *
-     * @return models.Patient.gender
+     * @return gender
      */
     public String getGender() {
         return this.Gender;
@@ -101,7 +100,7 @@ public class Patient implements Serializable {
      * getDoctor:
      * Returns the doctor's name of a given patient.
      *
-     * @return models.Patient.doctor
+     * @return Patient.doctor
      */
     public String getDoctor() {
         return this.Doctor;
@@ -121,7 +120,7 @@ public class Patient implements Serializable {
      *getNurse:
      * Returns the Nurse's name of a given patient.
      *
-     * @return models.Patient.nurse
+     * @return Patient.nurse
      */
     public String getNurse() {
         return this.Nurse;
@@ -152,7 +151,7 @@ public class Patient implements Serializable {
      *getInsurance:
      * Returns the insurance information of a given patient.
      *
-     * @return models.Patient.insurance
+     * @return insurance
      */
     public Insurance getInsurance()
     {
@@ -238,7 +237,7 @@ public class Patient implements Serializable {
      *getMedicationHistory:
      * Returns the ArrayList of patient's medications.
      *
-     * @return ArrayList<models.Medication> Meds
+     * @return ArrayList<Medication> Meds
      */
     public ArrayList<Medication> getMedicationHistory()
     {
