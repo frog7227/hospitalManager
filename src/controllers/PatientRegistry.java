@@ -288,7 +288,7 @@ public class PatientRegistry {
                     break;
                 //------------ADD APPOINTMENT----------------------------------------------------
                 case 3:
-                    System.out.println("Enter the patient name");
+                    System.out.println("Enter the patient name");// open insurance
 
                     name = scan.nextLine();
                     Patient pat = null; // so we can use it no matter what
@@ -337,7 +337,7 @@ public class PatientRegistry {
 
 
                         pat.addAppointment(addApt);
-                        try {
+                        try {// save updated patient
                             TheServer.savePatient(pat);
                         } catch (PatientUnableToBeSavedException putbs) {
                             System.out.println(putbs.getMessage());

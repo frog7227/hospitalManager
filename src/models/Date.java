@@ -21,6 +21,9 @@ public class Date implements Serializable {
     /**
      Contructors
     */
+    /**
+     * no args constructor
+     */
     public Date() {
         hour = 0;
         min = 0;
@@ -29,6 +32,11 @@ public class Date implements Serializable {
         year = 0;
     }
 
+    /**
+     *
+     * @param hour of the time
+     * @param min of the time
+     */
     public Date(int hour, int min) {
         this.hour = hour;
         this.min = min;
@@ -37,6 +45,12 @@ public class Date implements Serializable {
         year = 0;
     }
 
+    /**
+     *
+     * @param month of the date
+     * @param day of the date
+     * @param year of the date
+     */
     public Date(int month, int day, int year) {
         this.month = month;
         this.day = day;
@@ -45,6 +59,14 @@ public class Date implements Serializable {
         min = 0;
     }
 
+    /**
+     *
+     * @param month of the date
+     * @param day of the date
+     * @param year of the date
+     * @param hour of the time
+     * @param min of the time
+     */
     public Date(int month, int day, int year, int hour, int min) {
         this.month = month;
         this.day = day;
@@ -56,10 +78,17 @@ public class Date implements Serializable {
     /**
     Getters
     */
+    /**
+     *
+     * @return The date as a string
+     */
     public String getDate() {
         return month + "/" + day + "/" + year;
     }
-
+    /**
+     *
+     * @return The date as a string
+     */
     @Override
     public String toString(){ return month + "/" + day + "/" + year; }
 
