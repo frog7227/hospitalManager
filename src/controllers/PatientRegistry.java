@@ -315,9 +315,7 @@ public class PatientRegistry {
                                         .replace("]", "").trim().replace(",", ""));
 
                             }
-
                             int appointmentNum = 0;
-
                             do {
                                 System.out.println("Enter a number starting from 1 to the corresponding appointment.");
                                 while (!scan.hasNextInt()) {
@@ -325,7 +323,7 @@ public class PatientRegistry {
                                     System.err.println("Please enter a valid number.");
                                 }
                                 appointmentNum = scan.nextInt();
-                            } while (appointmentNum < 1 || appointmentNum > pat.getAppointments().size());
+                            } while (appointmentNum < 1 || appointmentNum > pat.getAppointments().size());// retry if it's invalid
                             followUpDate = pat.getAppointments().get(appointmentNum - 1).getDate();
                         }
                         Appointment addApt = makeAppointment(scan);

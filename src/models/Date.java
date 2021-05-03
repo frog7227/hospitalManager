@@ -60,6 +60,9 @@ public class Date implements Serializable {
         return month + "/" + day + "/" + year;
     }
 
+    @Override
+    public String toString(){ return month + "/" + day + "/" + year; }
+
     public String getTime() {
         return hour + ":" + min;
 

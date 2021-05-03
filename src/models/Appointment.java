@@ -1,5 +1,6 @@
 package models;
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
   4/18/2021
@@ -13,7 +14,6 @@ public class Appointment implements Serializable {
     private Date date;
     private String aliment;
     private Date followUp;
-    private String empty;
   
     /**
     Constructors
@@ -37,8 +37,12 @@ public class Appointment implements Serializable {
      */
     @Override
     public String toString() {
-        return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
-                    +"\r\n";
+                if(Objects.isNull(followUp)){
+                    return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
+                            +"\r\n";
+                }else return "++Appointment on " + date.getDate() +" at "+ date.getTime() + ", following up from the appointment on " + followUp.toString() + ":\n       Ailment: " + aliment
+                        + "\r\n";
+
     }
 
     public Date getDate() {
