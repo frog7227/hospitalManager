@@ -64,4 +64,5 @@ public class Date implements Serializable {
         return hour + ":" + min;
 
     }
+
 }

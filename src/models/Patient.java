@@ -216,10 +216,12 @@ public class Patient implements Serializable {
     }
 
     //Will we need this?
-//    public models.Appointment getAppoinment(models.Date AppDate)
-//    {
-//        //return AN appoinment attatched to AppDate
-//    }
+   public ArrayList<Appointment> getAppointments()
+
+   {
+       return Apps;
+        //return AN appoinment attatched to AppDate
+    }
 
     /**
      *addMedication:
@@ -243,4 +245,6 @@ public class Patient implements Serializable {
     {
         return Meds;
     }
+
+
 }

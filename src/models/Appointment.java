@@ -37,7 +37,11 @@ public class Appointment implements Serializable {
      */
     @Override
     public String toString() {
-        return "++models.Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
+        return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
                     +"\r\n";
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
