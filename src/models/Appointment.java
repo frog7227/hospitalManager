@@ -18,6 +18,8 @@ public class Appointment implements Serializable {
     /**
     Constructors
     */
+
+
     public Appointment(Date date, String aliment)
     {
       this.date = date;

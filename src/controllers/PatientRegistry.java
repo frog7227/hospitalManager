@@ -288,7 +288,7 @@ public class PatientRegistry {
                     break;
                 //------------ADD APPOINTMENT----------------------------------------------------
                 case 3:
-                    System.out.println("Enter the patient name");
+                    System.out.println("Enter the patient name");// open insurance
 
                     name = scan.nextLine();
                     Patient pat = null; // so we can use it no matter what
@@ -329,13 +329,15 @@ public class PatientRegistry {
 
                             addApt = makeAppointment(scan);
 
-                        }while(addApt.getDate().compareTo(followUpDate) > 0);
+                        }while( !Objects.isNull(followUpDate) && addApt.getDate().compareTo(followUpDate) > 0);// is null is checked first, os if it's null it does not try to compare
 
                         if (!Objects.isNull(followUpDate)) {// set the follow up date if it is set already
                             addApt.setFollowUp(followUpDate);
                         }
+
+
                         pat.addAppointment(addApt);
-                        try {
+                        try {// save updated patient
                             TheServer.savePatient(pat);
                         } catch (PatientUnableToBeSavedException putbs) {
                             System.out.println(putbs.getMessage());

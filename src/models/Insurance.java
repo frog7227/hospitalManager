@@ -9,40 +9,57 @@ import java.io.Serializable;
  * @author Cameron Hoss
  */
 public class Insurance implements Serializable {
-    /**
-    Instance Variables
-    */
+
     private String cardHolder;
     private String id;
     private String groupNum;
 
+
+
     /**
-    Constructors
-    */
+     *
+     * @param cardHolder is the card holder's name
+     * @param id is the member id
+     * @param groupNum is the group number
+     */
     public Insurance(String cardHolder, String id, String groupNum) {
         this.cardHolder = cardHolder;
         this.id = id;
         this.groupNum = groupNum;
     }
 
+
+
     /**
-    Methods
-    */
+     *
+     * @return the card holder's name
+     */
     public String getCardHolder() {
         return cardHolder;
     }
-
+    /**
+     *
+     * @return the Member ID
+     */
     public String getID() {
         return id;
     }
-
+    /**
+     *
+     * @return the Group Number
+     */
     public String getGroupNum() {
         return groupNum;
     }
 
     /**
+     *
      * newInsurance
      * This method takes in parameters to overwrite the current instance variables
+     *
+     * @param cardHolder is the card holder's name
+     * @param id is the member id
+     * @param groupNum is the group number
      */
     public void newInsurance(String cardHolder, String id, String groupNum) {
         this.cardHolder = cardHolder;
