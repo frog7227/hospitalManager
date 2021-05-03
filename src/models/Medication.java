@@ -30,26 +30,57 @@ public class Medication implements Serializable {
       this.startDate = startDate;
       this.endDate = endDate;
     }
-  
+
     /**
-    Methods
-    */
+     * getName:
+     * Returns the name of the medication.
+     *
+     * @return name
+     */
     public String getName()
     {
       return name;
     }
+
+    /**
+     * getDose:
+     * Returns the dose of the medication.
+     *
+     * @return dose
+     */
     public double getDose()
     {
       return dose;
     }
+
+    /**
+     * getDoseUnit:
+     * Returns the dose unit of the medication.
+     *
+     * @return doseUnit
+     */
     public String getDoseUnit()
     {
       return doseUnit;
     }
+
+    /**
+     * getStartDate:
+     * Returns the date the medication should begin.
+     *
+     * @return startDate
+     */
     public Date getStartDate()
     {
       return startDate;
     }
+
+    /**
+     * getEndDate:
+     * Returns the date the medication should end.
+     *
+     * @return endDate
+     */
     public Date getEndDate()
     {
       return endDate;

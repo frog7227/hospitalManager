@@ -365,6 +365,14 @@ public class PatientRegistry {
             }
         }
     }
+
+    /**
+     * makeAppointment:
+     * Allows user to add appointments to a given patient instance.
+     * 
+     * @param scan
+     * @return
+     */
     private static Appointment makeAppointment(Scanner scan){
         //System.out.println("Enter a date for appointment: ");
         int AppMonth, AppDay, AppYear, AppHour, AppMin;
