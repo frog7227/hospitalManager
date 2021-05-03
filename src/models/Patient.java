@@ -199,7 +199,7 @@ public class Patient implements Serializable {
             System.out.println(Apps.toString().replace("[","").replace("]","").trim()
                     .replace(",", ""));
         }
-        System.out.println("===========End of models.Patient==========");
+        System.out.println("===========End of Patient==========");
         System.out.println("\n");
     }
 
