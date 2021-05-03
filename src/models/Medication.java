@@ -18,7 +18,6 @@ public class Medication implements Serializable {
     private String doseUnit;
     private Date startDate;
     private Date endDate;
-    private String empty;
   
     /**
     Constructors
