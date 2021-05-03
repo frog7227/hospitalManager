@@ -367,7 +367,7 @@ public class PatientRegistry {
     /**
      * makeAppointment:
      * Allows user to add appointments to a given patient instance.
-     * 
+     *
      * @param scan
      * @return
      */
