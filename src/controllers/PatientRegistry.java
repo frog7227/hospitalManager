@@ -1,5 +1,6 @@
 package controllers;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 import models.*;
@@ -38,8 +39,9 @@ public class PatientRegistry {
             System.out.println( "::Enter function you would like to complete::");
             System.out.println("1. Add patient to system");
             System.out.println("2. Look up patient in system");
-            System.out.println("3. Quit");
-            System.out.println("Enter number (i.e: 1 or 2 or 3)");
+            System.out.println("3. Add Appointment to existing patient");
+            System.out.println("4. Quit");
+            System.out.println("Enter number (i.e: 1 or 2 or 3 or 4)");
 
             //choice of function
             while(!scan.hasNextInt()) {
@@ -377,12 +379,27 @@ public class PatientRegistry {
                     System.out.println(filestuff.getMessage());
                 }
             break;
-                //QUIT PROGRAM
-                default:
+                //------------ADD APPOINTMENT----------------------------------------------------
+                case 3:
                     System.out.println("Thanks. Goodbye.");
                     System.exit(0);
 
-            //--------------END PATIENT LOOKUP-------------------
+
+                    break;
+                //-----------------END ADD APPOINTMENT----------------------------------------------
+
+                //-----USER QUIT PROGRAM------------------------------------------
+                case 4:
+                    System.out.println("Thanks. Goodbye.");
+                    System.exit(0);
+
+                    break;
+                //Invalid Input
+                default:
+                    System.out.println("\n\n::Invalid Input::\n\n");
+
+                    break;
+                    //--------------END PATIENT LOOKUP-------------------
         }
         }
     }
