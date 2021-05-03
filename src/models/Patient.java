@@ -215,12 +215,11 @@ public class Patient implements Serializable {
         Apps.add(NewApp);
     }
 
-    //Will we need this?
+    //returns ArrayList of appointments for a given patient
    public ArrayList<Appointment> getAppointments()
 
    {
        return Apps;
-        //return AN appoinment attatched to AppDate
     }
 
     /**
@@ -245,6 +244,4 @@ public class Patient implements Serializable {
     {
         return Meds;
     }
-
-
 }
