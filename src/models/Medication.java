@@ -18,10 +18,16 @@ public class Medication implements Serializable {
     private String doseUnit;
     private Date startDate;
     private Date endDate;
-  
+
     /**
-    Constructors
-    */
+     * Constructor for Medication that takes in all the necessary instance variables.
+     *
+     * @param name
+     * @param dose
+     * @param doseUnit
+     * @param startDate
+     * @param endDate
+     */
     public Medication(String name, double dose, String doseUnit, Date startDate, Date endDate)
     {
       this.name = name;
