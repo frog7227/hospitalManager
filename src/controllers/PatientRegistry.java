@@ -335,11 +335,13 @@ public class PatientRegistry {
 
                             addApt = makeAppointment(scan);
 
-                        }while(addApt.getDate().compareTo(followUpDate) > 0);
+                        }while( !Objects.isNull(followUpDate) && addApt.getDate().compareTo(followUpDate) > 0);// is null is checked first, os if it's null it does not try to compare
 
                         if (!Objects.isNull(followUpDate)) {// set the follow up date if it is set already
                             addApt.setFollowUp(followUpDate);
                         }
+
+
                         pat.addAppointment(addApt);
                         try {
                             TheServer.savePatient(pat);
