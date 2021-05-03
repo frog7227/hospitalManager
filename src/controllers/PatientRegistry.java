@@ -355,6 +355,10 @@ public class PatientRegistry {
                 catch (PatientUnableToBeSavedException putbs) {
                         System.out.println(putbs.getMessage());
                     }
+
+                //confirm to user that the patient has been successfully saved
+                    System.out.println("\n\n::New Patient saved successfully::\n\n");
+
             break;
             //------------END ADDING NEW PATIENT---------------------------
 
