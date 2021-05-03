@@ -68,4 +68,20 @@ public class Date implements Serializable {
 
     }
 
+    /**
+     * compares two dates
+     * @param date date to be compared to
+     * @return the difference between the largest time intervals between the dates
+     */
+    public int compareTo(Date date){
+        if(date.year != this.year) return date.year - this.year;
+        else if (date.month != this.month) return date.month - this.month;
+        else if (date.day != this.day) return date.day - this.day;
+        else if (date.hour != this.hour) return date.hour - this.hour;
+        else if (date.min != this.min) return date.min - this.min;
+        else return 0;
+
+
+    }
+
 }

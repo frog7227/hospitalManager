@@ -303,7 +303,7 @@ public class PatientRegistry {
                     } catch (PatientNotFoundException | PatientFileDamagedException filestuff) {
                         System.err.println(filestuff.getMessage());
                     }
-                    if (!Objects.isNull(pat)) {// if it isn't null
+                    if (!Objects.isNull(pat)) {// This is done to remove this code from the try catch itself
                         Date followUpDate = null;
                         if (!pat.getAppointments().isEmpty()) {// if there's an existing appointment
                             System.out.println("Is this appointment a follow up for a previous appointment?");
@@ -326,7 +326,17 @@ public class PatientRegistry {
                             } while (appointmentNum < 1 || appointmentNum > pat.getAppointments().size());// retry if it's invalid
                             followUpDate = pat.getAppointments().get(appointmentNum - 1).getDate();
                         }
-                        Appointment addApt = makeAppointment(scan);
+                        Appointment addApt = null;// empty appointment
+
+                        do {
+                            if(!Objects.isNull(addApt) && addApt.getDate().compareTo(followUpDate) > 0){
+                                System.err.println("Please enter a date after the previous appointment.");
+                            }
+
+                            addApt = makeAppointment(scan);
+
+                        }while(addApt.getDate().compareTo(followUpDate) > 0);
+
                         if (!Objects.isNull(followUpDate)) {// set the follow up date if it is set already
                             addApt.setFollowUp(followUpDate);
                         }
