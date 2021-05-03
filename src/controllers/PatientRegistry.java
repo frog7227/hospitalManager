@@ -381,9 +381,9 @@ public class PatientRegistry {
             break;
                 //------------ADD APPOINTMENT----------------------------------------------------
                 case 3:
-                    System.out.println("Thanks. Goodbye.");
-                    System.exit(0);
 
+
+                //Needs implementation
 
                     break;
                 //-----------------END ADD APPOINTMENT----------------------------------------------
@@ -394,7 +394,7 @@ public class PatientRegistry {
                     System.exit(0);
 
                     break;
-                //Invalid Input
+                //------Invalid Input---------------------------------------------
                 default:
                     System.out.println("\n\n::Invalid Input::\n\n");
 
