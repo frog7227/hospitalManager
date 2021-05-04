@@ -44,9 +44,9 @@ public class Patient implements Serializable {
     /**
      * Constructor for a Patient instance.  Takes in a name, gender and birthdate to create a new Patient.
      *
-     * @param Name
-     * @param Gender
-     * @param Birthdate
+     * @param Name is the full name of the patient.
+     * @param Gender is the gender of the patient.
+     * @param Birthdate is the birthdate of the patient.
      */
     public Patient(String Name, String Gender, Date Birthdate) {
         this.Name = Name;
@@ -69,8 +69,6 @@ public class Patient implements Serializable {
     /**
      *setName:
      * Sets the name of a patient (if they get their name changed).
-     *
-     * @return void
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -90,7 +88,6 @@ public class Patient implements Serializable {
      *setGender:
      * Sets a gender for a given patient.
      *
-     * @return void
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
@@ -110,7 +107,6 @@ public class Patient implements Serializable {
      *setDoctor:
      * Sets Doctor's name of a given patient.
      *
-     * @return void
      */
     public void setDoctor(String Doctor) {
         this.Doctor = Doctor;
@@ -130,7 +126,6 @@ public class Patient implements Serializable {
      *setNurse:
      * Set's the nurse's name for a given patient.
      *
-     * @return void
      */
     public void setNurse(String Nurse) {
         this.Nurse = Nurse;
@@ -140,7 +135,6 @@ public class Patient implements Serializable {
      *setInsurance:
      * Set the insurance information of a given patient.
      *
-     * @return void
      */
     public void setInsurance(Insurance Ins)
     {
@@ -162,8 +156,6 @@ public class Patient implements Serializable {
      *Print:
      * This function prints out ALL of a given patient's information, with
      * formatting to make it look presentable.
-     *
-     * @return void
      */
     //NEW USEFUL FUNCTION
     public void Print()
@@ -206,8 +198,7 @@ public class Patient implements Serializable {
      *addAppointment:
      * Add an appointment to the ArrayList of appointments for a given patient.
      *
-     * @param NewApp
-     * @return void
+     * @param NewApp is the new appointment to be added.
      */
     public void addAppointment(Appointment NewApp)
     {
@@ -225,8 +216,7 @@ public class Patient implements Serializable {
      *addMedication:
      * Add a medication to the ArrayList of patient's medications.
      *
-     * @param NewMed
-     * @return void
+     * @param NewMed is the new medication to be added.
      */
     public void addMedication(Medication NewMed)
     {
