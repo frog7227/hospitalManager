@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="hospitalManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/hospitalManager_jar</output-path>
+    <root id="archive" name="hospitalManager.jar">
+      <element id="module-output" name="hospitalManager" />
+    </root>
+  </artifact>
+</component>
