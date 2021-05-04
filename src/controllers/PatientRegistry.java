@@ -370,8 +370,8 @@ public class PatientRegistry {
      * makeAppointment:
      * Allows user to add appointments to a given patient instance.
      *
-     * @param scan
-     * @return
+     * @param scan is the keyboard scanner (scans System.in)
+     * @return Appointment, is the appointment that was just made using this method.
      */
     private static Appointment makeAppointment(Scanner scan){
         //System.out.println("Enter a date for appointment: ");
