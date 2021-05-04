@@ -96,7 +96,7 @@ public class Medication implements Serializable {
    * doseOutput
    * Saves you from calling getDose and getDoseUnit back to back
    *
-   * @return "dose" "doseUnit"
+   * @return "dose" and "doseUnit"
    */
     public String doseOutput()
     {
