@@ -14,21 +14,25 @@ public class Appointment implements Serializable {
     private Date date;
     private String aliment;
     private Date followUp;
-  
+
     /**
-    Constructors
-    */
-
-
+     * Constructor for a Appointment. Takes in date and aliment to initialize
+     *
+     * @param date
+     * @param aliment
+     */
     public Appointment(Date date, String aliment)
     {
       this.date = date;
       this.aliment = aliment;
     }
-  
+
     /**
-    Methods
-    */
+     * setFollowUp
+     * Sets followUp with another previous appointment's date
+     *
+     * @param followUp this variable is the date of the previous appointment
+     */
     public void setFollowUp(Date followUp)
     {
       this.followUp = followUp;
