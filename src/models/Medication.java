@@ -22,11 +22,11 @@ public class Medication implements Serializable {
     /**
      * Constructor for Medication that takes in all the necessary instance variables.
      *
-     * @param name
-     * @param dose
-     * @param doseUnit
-     * @param startDate
-     * @param endDate
+     * @param name name of medication
+     * @param dose dose of medication
+     * @param doseUnit unit of dose
+     * @param startDate date of medication start
+     * @param endDate date of medication end
      */
     public Medication(String name, double dose, String doseUnit, Date startDate, Date endDate)
     {
@@ -41,7 +41,7 @@ public class Medication implements Serializable {
      * getName:
      * Returns the name of the medication.
      *
-     * @return name
+     * @return name of medication
      */
     public String getName()
     {
@@ -52,7 +52,7 @@ public class Medication implements Serializable {
      * getDose:
      * Returns the dose of the medication.
      *
-     * @return dose
+     * @return dose of medication
      */
     public double getDose()
     {
@@ -63,7 +63,7 @@ public class Medication implements Serializable {
      * getDoseUnit:
      * Returns the dose unit of the medication.
      *
-     * @return doseUnit
+     * @return dose unit of the medication
      */
     public String getDoseUnit()
     {
@@ -74,7 +74,7 @@ public class Medication implements Serializable {
      * getStartDate:
      * Returns the date the medication should begin.
      *
-     * @return startDate
+     * @return date the medication should begin
      */
     public Date getStartDate()
     {
@@ -85,7 +85,7 @@ public class Medication implements Serializable {
      * getEndDate:
      * Returns the date the medication should end.
      *
-     * @return endDate
+     * @return date the medication should end
      */
     public Date getEndDate()
     {
@@ -95,6 +95,8 @@ public class Medication implements Serializable {
   /**
    * doseOutput
    * Saves you from calling getDose and getDoseUnit back to back
+   *
+   * @return "dose" and "doseUnit"
    */
     public String doseOutput()
     {
