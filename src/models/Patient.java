@@ -97,7 +97,7 @@ public class Patient implements Serializable {
      * getDoctor:
      * Returns the doctor's name of a given patient.
      *
-     * @return Patient.doctor
+     * @return doctor
      */
     public String getDoctor() {
         return this.Doctor;
@@ -116,7 +116,7 @@ public class Patient implements Serializable {
      *getNurse:
      * Returns the Nurse's name of a given patient.
      *
-     * @return Patient.nurse
+     * @return nurse
      */
     public String getNurse() {
         return this.Nurse;
