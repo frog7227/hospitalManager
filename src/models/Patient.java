@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * models.Patient.java:
+ * Patient.java:
  * This class models a patient in the controllers.PatientRegistry.
  * For every patient, they have:
  *  - Their name (String, full name is used to look up a patient from JSON file)
@@ -17,12 +17,12 @@ import java.util.ArrayList;
  *  - Birthdate (date, MM/DD/YYYY)
  *  - Doctor's name (String)
  *  - Nurse's name (String)
- *  - models.Patient's models.Insurance (models.Insurance)
- *  - models.Patient's Appointments, past, present and future (ArrayList<models.Appointment>)
- *  - models.Patient's Medications (ArrayList<models.Medication>)
+ *  - Patient's Insurance (Insurance)
+ *  - Patient's Appointments, past, present and future (ArrayList &#60;Appointment&#62;)
+ *  - Patient's Medications (ArrayList &#60; Medication	&#62;)
  *
  *  Setters and Getters for these variables are in this java file, along with a
- *  models.Patient.Print() method which prints all of the above variables.
+ *  Print() method which prints all of the above variables.
  *
  * @author Alexander Croll
  */
@@ -67,46 +67,40 @@ public class Patient implements Serializable {
     }
 
     /**
-     *setName:
      * Sets the name of a patient (if they get their name changed).
+     * @param Name of a patient
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     *getGender:
-     * Returns the gender of a models.Patient.
-     *
-     * @return gender
+     * Returns the gender of a Patient.
+     * @return the gender of the patient
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     *setGender:
      * Sets a gender for a given patient.
-     *
+     * @param Gender is the gender as a string
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * getDoctor:
      * Returns the doctor's name of a given patient.
-     *
-     * @return doctor
+     * @return the doctor's name
      */
     public String getDoctor() {
         return this.Doctor;
     }
 
     /**
-     *setDoctor:
      * Sets Doctor's name of a given patient.
-     *
+     * @param Doctor the doctor's names
      */
     public void setDoctor(String Doctor) {
         this.Doctor = Doctor;
@@ -123,18 +117,16 @@ public class Patient implements Serializable {
     }
 
     /**
-     *setNurse:
-     * Set's the nurse's name for a given patient.
-     *
+     * Sets the Nurse's name of a given patient.
+     * @param Nurse is the nurse of the patient
      */
     public void setNurse(String Nurse) {
         this.Nurse = Nurse;
     }
 
     /**
-     *setInsurance:
      * Set the insurance information of a given patient.
-     *
+     * @param Ins is the insurance for the patient
      */
     public void setInsurance(Insurance Ins)
     {
@@ -224,10 +216,8 @@ public class Patient implements Serializable {
     }
 
     /**
-     *getMedicationHistory:
-     * Returns the ArrayList of patient's medications.
      *
-     * @return ArrayList<Medication> Meds
+     * @return the ArrayList of patient's medications.
      */
     public ArrayList<Medication> getMedicationHistory()
     {
