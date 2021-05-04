@@ -12,19 +12,19 @@ public class Appointment implements Serializable {
     Instance Variables
     */
     private Date date;
-    private String aliment;
+    private String ailment;
     private Date followUp;
 
     /**
-     * Constructor for a Appointment. Takes in date and aliment to initialize
+     * Constructor for a Appointment. Takes in date and ailment to initialize
      *
-     * @param date
-     * @param aliment
+     * @param date is the date for the appointment
+     * @param ailment is the reason for coming in
      */
-    public Appointment(Date date, String aliment)
+    public Appointment(Date date, String ailment)
     {
       this.date = date;
-      this.aliment = aliment;
+      this.ailment = ailment;
     }
 
     /**
@@ -44,9 +44,9 @@ public class Appointment implements Serializable {
     @Override
     public String toString() {
                 if(Objects.isNull(followUp)){
-                    return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + aliment
+                    return "++Appointment on " + date.getDate() +" at "+ date.getTime()  + ":\n       Ailment: " + ailment
                             +"\r\n";
-                }else return "++Appointment on " + date.getDate() +" at "+ date.getTime() + ", following up from the appointment on " + followUp.toString() + ":\n       Ailment: " + aliment
+                }else return "++Appointment on " + date.getDate() +" at "+ date.getTime() + ", following up from the appointment on " + followUp.toString() + ":\n       Ailment: " + ailment
                         + "\r\n";
 
     }
