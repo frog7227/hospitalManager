@@ -9,7 +9,7 @@ import models.exceptions.PatientNotFoundException;
 import models.exceptions.PatientUnableToBeSavedException;
 
 /**
- * controllers.PatientRegistry.java:
+ * PatientRegistry.java:
  * <p>
  * This will be our main method/class for the final project
  *
@@ -22,7 +22,7 @@ public class PatientRegistry {
 
     public static void main(String[] args)
     {
-        //Make a new controllers.FileHandler instance for JSON file
+        //Make a new FileHandler instance for JSON file
         FileHandler TheServer = new FileHandler();
 
         while(true) // run until needing to stop

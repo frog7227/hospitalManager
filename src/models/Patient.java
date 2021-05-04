@@ -10,16 +10,16 @@ import java.util.ArrayList;
 
 /**
  * Patient.java:
- * This class models a patient in the controllers.PatientRegistry.
+ * This class models a patient in the PatientRegistry.
  * For every patient, they have:
- *  - Their name (String, full name is used to look up a patient from JSON file)
+ *  - Their name (String, full name is used to look up a patient from the file)
  *  - Gender (String)
  *  - Birthdate (date, MM/DD/YYYY)
  *  - Doctor's name (String)
  *  - Nurse's name (String)
  *  - Patient's Insurance (Insurance)
  *  - Patient's Appointments, past, present and future (ArrayList &#60;Appointment&#62;)
- *  - Patient's Medications (ArrayList &#60; Medication	&#62;)
+ *  - Patient's Medications (ArrayList &#60; Medication&#62; )
  *
  *  Setters and Getters for these variables are in this java file, along with a
  *  Print() method which prints all of the above variables.

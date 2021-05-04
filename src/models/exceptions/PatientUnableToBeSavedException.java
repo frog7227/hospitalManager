@@ -1,6 +1,7 @@
 package models.exceptions;
 
 /**
+ * Thrown when a patient cannot be saved
  * @author Andrew Ostrosky
  */
 public class PatientUnableToBeSavedException extends Exception {

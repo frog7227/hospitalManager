@@ -5,7 +5,7 @@ import models.exceptions.PatientNotFoundException;
 import models.exceptions.PatientUnableToBeSavedException;
 
 /**
- * This interface allows for opening a connection to the models.Database, in this case the file
+ * This interface allows for opening a connection to the Database, in this case the file
  *
  * @author Andrew Ostrosky
  */

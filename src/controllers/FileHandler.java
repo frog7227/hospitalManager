@@ -41,7 +41,7 @@ public class FileHandler implements Database {
             FileInputStream fileReader = new FileInputStream(("./patients/" + name.replaceAll(" ", "").toUpperCase() + Extension)); // open the file to read the patient
             ObjectInputStream patientReader = new ObjectInputStream(fileReader);// open the object reader
             patient = (Patient) patientReader.readObject();// read the object and interpret it as a patient
-            if (!patient.getName().equals(name))
+            if (!patient.getName().equalsIgnoreCase(name))
                 throw new PatientFileDamagedException(); // if the name in the opened file doesn't match the original name request, throw the damaged file exception
         } catch (IOException | ClassNotFoundException exception) {//catch the IO errors
             //exception.printStackTrace();

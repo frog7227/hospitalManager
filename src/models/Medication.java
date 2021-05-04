@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
 4/18/2021
-This class will model perscribed medications
+This class will model prescribed medications
 @author Cameron Hoss
 */
 public class Medication implements Serializable {
